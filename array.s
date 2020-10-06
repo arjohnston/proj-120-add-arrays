@@ -11,7 +11,7 @@
  * For testing purposes as required in the spec, we only need to iteratate
  * from i = 0 to i = 3 and we need to have the arrays pre-defined in .data.
  *
- * To validate the results in C: 
+ * To validate the results in array C: 
  * (1) run the program in debug mode by using the command: make debug
  * (2) Find the place to insert a breakpoint using the command multiple times: list
  * (3) Insert a breakpoint after the registers are loaded in the _check_values
@@ -58,6 +58,6 @@ _exit:
 	SWI 0				@ Software interupt
 
 .data
-A:			.word	1, 2, 3, 4
-B:			.word	5, 6, 7, 8
-C:			.word	0, 0, 0, 0
+A:	.word	1, 2, 3, 4		@ Array A initialized with [1, 2, 3, 4]
+B:	.word	5, 6, 7, 8		@ Array B initialized with [5, 6, 7, 8]
+C:	.word	0, 0, 0, 0		@ Array C initialized with [0]
